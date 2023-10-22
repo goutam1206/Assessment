@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+  <link rel="icon" href="data:,">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+  $('#mType').on('change', function() {
+    if ( this.value == 'POST' )
+    {
+      $("#PayloadContent").show();
+      $("#payload").show();
+      $("#resp_option").show();
+
+    }
+    else if (this.value == 'GET'){
+        $("#payload").blur();
+        $("#payload").children().prop('readOnly',true);
+        $("#resp_option").show();
+    }
+    else
+    {
+      $("#PayloadContent").blur();
+      $("#resp_option").blur();
+      $("#payload").blur();
+      $("#PayloadContent").children().prop('readOnly',true);
+      $("#resp_option").children().prop('readOnly',true);
+      $("#payload").children().prop('readOnly',true);
+    }
+  });
+});
+</script>
+<script>
+  $(document).ready(function(){
+    $('input[type=radio][name=respType]').change(function() {
+      if (this.value == 'DummyResponse') {
+        $("#resp_content").blur();
+        $("#resp_content").children().prop('readOnly',true);
+      }
+      else if (this.value == 'CustomResponse') {
+        $("#resp_content").show();
+      }
+      else{
+        $("#resp_content").blur();
+        $("#resp_content").children().prop('readOnly',true);
+      }
+   });
+});
+</script>
+<script>
+	$(function() {
+          $('a#test').on('click', function(e) {
+            e.preventDefault()
+            $.getJSON('/mock_request',
+                function(data) {
+            });
+            return false;
+          });
+        });
+</script>
+<body>
+<H1>Welcome to the Olympiad preperation portal</H1>
+<p>Please use this opportunity to practice for the test</P>
+<form action="/api/starttest" method="GET">
+  <label for="fname">What is your name</label>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <label for="method_type">What is your gender</label>
+  <select name="mType" id="mType" class="required" required>
+  <option value="">Please Select</option>
+  <option value="m">Male</option>
+  <option value="f">Female</option><br>
+  </select>
+  </br></br>
+    <label for="req_type">Which subject would you like to attempt?</label>
+    <select name="subject" id="subject" class="required" required>
+        <option value="" selected>Please select</option>
+        <option value="random">Random</option>
+    </select>
+    </br></br>
+    <label for="ats_type">What is your age group</label>
+    <select name="level" id="level" class="required" required>
+        <option value="">Please Select ATS</option>
+        <option value="2">5 - 7</option>
+        <option value="2">8 - 10</option>
+        <option value="2">11 - 14</option>
+        <option value="2">15 and above </option>
+    </select>
+    </br></br>
+     <input type="hidden" id="random_options" name="random_options" value=1>
+     <input type="hidden" id="random_questions" name="random_questions" value=1>
+    <input type="hidden" id="spot_assess" name="spot_assess" value=0>
+
+  <a href=# id=submit><button class='btn btn-default' >Lets Start!</button></a>
+</form>
+</body>
+
+</html>

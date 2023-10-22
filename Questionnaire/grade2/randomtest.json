@@ -1,0 +1,60 @@
+{
+	"questions" :
+	[
+		{
+			"sno" : 1,
+			"qtype" : "MULTI_CHOICE_SINGLE_SELECT",
+			"question" : {
+				"id" : "M_1",
+				"name" : "Which is the greater number from below?",
+				"options" : { "a" : "2 x 5",
+							  "b" : "3 x 5",
+							  "c" : "2 x 2",
+							  "d" : "5 X 4"
+							 },
+				"answer" : ["d"]
+			}
+		},
+		{
+			"sno" : 2,
+			"qtype" : "MULTI_CHOICE_SINGLE_SELECT",
+			"question" : {
+				"id" : "M_2",
+				"name" : "Which are the below are planets?",
+				"options" : { "a" : "Sagittarious",
+							  "b" : "Jupiter",
+							  "c" : "Titan",
+							  "d" : "Omega"
+							 },
+				"answer" : ["b"]
+			}
+		},
+		{
+			"sno" : 3,
+			"qtype" : "MULTI_CHOICE_SINGLE_SELECT",
+			"question" : {
+				"id" : "M_3",
+				"name" : "Which is our National animal?",
+				"options" : { "a" : "Tiger",
+							  "b" : "Lion",
+							  "c" : "Cheetah",
+							  "d" : "Leopard"},
+				"answer" : ["a"]
+			}
+		},
+		{
+			"sno" : 4,
+			"qtype" : "MULTI_CHOICE_SINGLE_SELECT",
+			"question" : {
+				"id" : "M_4",
+				"name" : "Who authored our National Anthem?",
+				"options" : { "a" : "Mohandas Karamchand Gandhi",
+							  "b" : "Rabindranath Tagore",
+					  		  "c" : "Bankim chandra Chatterjee",
+							  "d" : "Subhash Chandra Bose"
+							 },
+				"answer" : ["b"]
+			}
+		}
+	]
+}
