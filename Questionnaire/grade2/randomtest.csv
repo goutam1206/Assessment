@@ -1,0 +1,32 @@
+sno,qtype,question__id,question__name,question__options__a,question__options__b,question__options__c,question__options__d,question__answer__-,
+1,MULTI_CHOICE_SINGLE_SELECT,M_1,Which is the greater number from below?,2 x 5,3 x 5,2 x 2,5 X 4,d,
+2,MULTI_CHOICE_SINGLE_SELECT,M_2,Which are the below are planets?,Sagittarious,Jupiter,Titan,Omega,b,
+3,MULTI_CHOICE_SINGLE_SELECT,M_3,Which is our National animal?,Tiger,Lion,Cheetah,Leopard,a,
+4,MULTI_CHOICE_SINGLE_SELECT,M_4,Who authored our National Anthem?,Mohandas Karamchand Gandhi,Rabindranath Tagore,Bankim chandra Chatterjee,Subhash Chandra Bose,b,
+5,MULTI_CHOICE_SINGLE_SELECT,M_5,"In certain code language POND is coded as RSTL, how is HEAR written in that code? ",GHIJ,GHIZ,JIGZ,JCLZ,c,
+6,MULTI_CHOICE_SINGLE_SELECT,M_6,"17, 22, 27, 32, …... ? ….... ",33,35,38,37,d,
+7,MULTI_CHOICE_SINGLE_SELECT,M_7,"Find the missing term in the following series 
+ AYD, BVF, DRH, ?, KGL ",FMI,GMJ,GLJ,HLK,c,
+8,MULTI_CHOICE_SINGLE_SELECT,M_8,"Find the missing numbers in the number patterns. 
+1, 2, 4, 8, 16, ______. ",31,32,34,36,b,
+9,MULTI_CHOICE_SINGLE_SELECT,M_9,Compute: 1 + 2 + 3 + 4+ 5 + ..... + 47 + 48+ 49 + 50 ,1260,1365,1275,None,c,
+10,MULTI_CHOICE_SINGLE_SELECT,M_10,Select the number that is 1 less than 19. ,22,26,20,18,d,
+11,MULTI_CHOICE_SINGLE_SELECT,M_11,Which even number comes before? ,4,8,16,10,a,
+12,MULTI_CHOICE_SINGLE_SELECT,M_12,"Which number makes the equation true?  14 + 4 = ? + 5 ",14,13,15,16,b,
+13,MULTI_CHOICE_SINGLE_SELECT,M_13,How do you write this number using digits? EIGHT,80,18,8,48,c,
+14,MULTI_CHOICE_SINGLE_SELECT,M_14,Which is not a way to make 6? ,5+1,2+4,0+4,1+5,c,
+15,MULTI_CHOICE_SINGLE_SELECT,M_15,93 is 9 tens plus 3 units. Which is another way to make 93? ,9 tens plus 19 units ,6 tens plus 3 units ,7 tens plus 13 units ,8 tens plus 13 units ,d,
+16,MULTI_CHOICE_SINGLE_SELECT,M_16,What is 25 rounded to the nearest ten? ,30,40,10,50,a,
+17,MULTI_CHOICE_SINGLE_SELECT,M_17,"Write this as a subtraction number sentence (using – and =). 
+Forty-six less forty-four is two. ",46 - 44 = 2,44 - 46 = 2,50 - 6 = 44,43 - 45 = 2,a,
+18,MULTI_CHOICE_SINGLE_SELECT,M_18,3 dogs and 4 cats have ________ legs. ,28,26,7,14,a,
+19,MULTI_CHOICE_SINGLE_SELECT,M_19,"Find the missing number in the number patterns 
+1, 4, 9, 16, ( ), ( ),..... ","25, 36","24, 30","24, 36","30, 36",a,
+20,MULTI_CHOICE_SINGLE_SELECT,M_20,A school choir has 72 members altogether. The number of girls is 6 more than the number of boys. How many girls are there in the school choir? ,49,43,34,48,a,
+21,MULTI_CHOICE_SINGLE_SELECT,M_21,Trees are to be planted along a road that is 40 m long. The distance between every two trees is 8 m. How many trees can be planted if both ends of the road are to be planted with trees? ,5,6,7,8,a,
+22,MULTI_CHOICE_SINGLE_SELECT,M_22,Arrange the given numbers in descending order,25 47 65 78,65 78 25 47,78 47 25 65,78 65 47 25,a,
+23,MULTI_CHOICE_SINGLE_SELECT,M_23,"There  are  40  boys  and  20  girls in  a  class.  Find  out  the  total 
+number of students in the class.",40,60,90,65,b,
+24,MULTI_CHOICE_SINGLE_SELECT,M_24,Find the number that is 100 more than 250.,300,350,150,450,b,
+25,MULTI_CHOICE_SINGLE_SELECT,M_25,"In which place value 
+is the number 8 in the number 86?",In the tens,In the Ones,In the Hundreds,In the twos,a,
