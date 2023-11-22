@@ -4,7 +4,7 @@ import random
 import requests
 from flask import Flask, request, render_template, jsonify, redirect, url_for
 import threading
-from loguru import logger
+import logger
 import json
 import csv
 app = Flask(__name__)
