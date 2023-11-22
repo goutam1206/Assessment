@@ -6,7 +6,7 @@ from flask import Flask, request, render_template, jsonify, redirect, url_for
 import threading
 import logger
 import json
-
+import csv
 app = Flask(__name__)
 current_question_index = 0
 global questions
@@ -72,6 +72,14 @@ def showQuestions():
 
 def getQuestionsPage(grade, subject):
     if grade == 2 and subject == 'random':
+        fp = 'Questionnaire/grade2/randomtest.csv'
+        csv_data = []
+        with open(fp, 'r') as file:
+            csv_reader = csv.DictReader(file)
+            for row in csv_reader:
+                csv_data.append(row)
+        json_output = json.dumps(csv_data, indent=4)
+        logger.logger.info("I am now converting the csv to json", json.loads(json_output))
         filepath = 'Questionnaire/grade2/randomtest.json'
         if os.path.isfile(filepath) and os.path.getsize(filepath) > 0:
             with open(filepath, 'r') as file:
@@ -87,7 +95,13 @@ def getQuestionsPage(grade, subject):
 
 @app.route('/', methods=["GET"])
 def getexamdetails():
-    return render_template('sf.html')
+    response = render_template('sf.html')
+    # Create a response object and add headers to it
+    response_object = app.make_response(response)
+    response_object.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, max-age=0'
+    response_object.headers['Pragma'] = 'no-cache'
+    response_object.headers['Expires'] = '-1'
+    return response_object
 
 @app.route('/api/starttest', methods=["GET"])
 def gettests():
@@ -131,6 +145,7 @@ def gettests():
 def getnextQuestion():
     global questions
     if len(questions) != 0:
+        print("["+str(len(questions))+"]")
         return questions.pop()
     else:
         return {}
@@ -156,9 +171,12 @@ def dummy():
             return jsonify(result="Incorrect question")
     else:
         actual = request.form.get("selected_option")
-        if answeredQuestions.pop()["question"]["answer"][0] == actual:
-            logger.logger.info("You answered correctly!!")
-            user["score"] += 1
+        if len(answeredQuestions) != 0:
+            if answeredQuestions.pop()["question"]["answer"][0] == actual:
+                logger.logger.info("You answered correctly!!")
+                user["score"] += 1
+            else:
+                return jsonify(result=user, message="You already aubmitted the test!")
         return jsonify(result=user)
 
 
